@@ -1,0 +1,38 @@
+git initgit initgit initgit init<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./newTodo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>OOP To-Do</title>
+</head>
+<body>
+
+    <div style="width: 60%;" class="container mt-5">
+        <h2 class="text-center">To-Do List</h2>
+        <div class="card shadow">
+            <div class="card-body">
+                <form id="todoListForm">
+                    <div class="form-group">
+                        <label for="taskInput" class="form-label">Enter a new task</label>
+                        <input type="text" id="taskInput" class="form-control mb-3" placeholder="Add your task here" required>
+                    </div>
+                    <button id="submitBtn" type="submit" class="btn btn-warning w-100">Add Task</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header text-center">
+                <h5 style="padding: 10px ;" class="mt-3 bg-warning text-center">Things to get done!</h5>
+            </div>
+            <ul id="displayTaskList" class="list-group">
+                
+            </ul>
+        </div>
+    </div>
+    
+    <script src="./newTodo.js"></script>
+</body>
+</html>
