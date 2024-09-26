@@ -44,13 +44,14 @@ class TodoList {
 
         this.tasks.forEach((task, i) => {
             const taskClass = task.isCompleted ? 'text-decoration-line-through' : '';
+            const completedButtonClass = task.isCompleted ? 'd-none' : '';
             const undoButtonClass = task.isCompleted ? '' : 'd-none';
 
             display.innerHTML += `
                 <li class="list-group-item bg-light m-3 p-2 shadow-sm d-flex justify-content-between align-items-center">
                     <span class="${taskClass}">${task.description}</span>
                     <div>
-                        <button class="btn btn-success btn-sm me-2 ${undoButtonClass}" onclick="todoList.toggleTaskCompletion(${i})">Completed</button>
+                        <button class="btn btn-success btn-sm me-2 ${completedButtonClass}" onclick="todoList.toggleTaskCompletion(${i})">Completed</button>
                         <button class="btn btn-warning btn-sm me-2 ${undoButtonClass}" onclick="todoList.toggleTaskCompletion(${i})">Undo</button>
                         <button class="btn btn-danger btn-sm" onclick="todoList.removeTask(${i})">Delete</button>
                     </div>
