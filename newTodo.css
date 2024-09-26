@@ -1,9 +1,27 @@
 #displayTaskList {
+    position: relative;
+    z-index: 1;
+}
+
+#displayTaskList::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('./todoIMG/todo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* filter: blur(20%); */
-    
-    
+    filter: blur(1.5px); /* Adjust the blur value as needed */
+    z-index: -1;
 }
+
+.list-group-item {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.8); /* Optional: Add a slight white background to improve readability */
+    border-radius: 5px;
+}
+
